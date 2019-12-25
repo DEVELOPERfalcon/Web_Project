@@ -16,12 +16,18 @@
             section .card{margin-top: 100px; margin-bottom: 10px; background-color: rgb(236, 235, 235);}
             .btn{display: table; margin-right: auto; margin-left: auto;}
             .card-body{display: flex; justify-content: center;}
-            section img{width: 190px; margin: 10px;}
+            section img{width: 190px; height: 338px; margin: 10px;}
             footer>ul{list-style: none;}
             footer>ul>li:first-child{margin-top: auto; margin-bottom: auto; font-size: 25px;}
             footer>ul>li:nth-child(2){margin-top: auto; margin-bottom: auto;}
             footer>ul>li:last-child{text-align: right;}
         </style>
+
+        <script>
+            function profile(){
+                window.open("http://developer3.dothome.co.kr/WebProject/profile.html", "new_win", 'width=355, height=510, left='+(screen.availWidth/2-177)+', top='+(screen.availHeight/2-255)+', toolbars=no, menubars=no, scrollbars=no, resizable=no');
+            }
+        </script>
 
     </head>
     <body>
@@ -31,7 +37,7 @@
             <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navMenu">
-                    <ul class="navbar-nav">
+                    <ul class="nav nav-tabs">
                         <li class="nav-item col"><a href="#" class="nav-link">앱 소개</a></li>
                         <li class="nav-item col"><a href="#" class="nav-link">버그 신고</a></li>
                         <li class="nav-item col"><a href="#" class="nav-link">문의</a></li>
@@ -73,10 +79,10 @@
         </section>
 
 
-        <footer class="container">
+        <footer name="footer" class="container">
             <ul class="row bg-dark text-light">
                 <li class="col font-weight-bold">Tak's app</li>
-                <li class="col">개발자 정보</li>
+                <li class="col"><a href="#footer" onclick="profile()">개발자 정보</a></li>
                 <li class="col"><sub>Copyright 2019. hyungtak. all rights reserved.</sub></li>
             </ul>
         </footer>
