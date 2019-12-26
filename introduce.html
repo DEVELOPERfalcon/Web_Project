@@ -18,8 +18,8 @@
             body>div>nav{border: 1px solid black; min-width: 200px;}
             body>div>section{border: 1px solid black; flex-grow: 1;}
             section>div>div{border: 1px solid black; margin: 5px;}
-            section>div>div>div{width: 45%; margin: 10px; text-align: center;}
-            img{width: 100%; height: auto;}
+            section>div>div>div{width: 45%; margin: 5px; display: flex; flex-direction: column; align-items: center;}
+            section img{width: 80%; height: auto; margin-bottom: 10px;}
             
             footer{margin-top: 10px;}
             footer>ul{list-style: none;}
@@ -179,11 +179,11 @@
     
             <section>
                 <div class="card">
-                    <div class="card-body row">
+                    <div class="card-body">
                         <div class="float-left">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app1_introduce.html" class="btn btn-primary">숫자 야구 게임<br>소개 보러가기</a></p>
+                            <p><a href="#header" onclick="introduce_app1()" class="btn btn-primary">숫자 야구 게임<br>소개 보러가기</a></p>
                             <img class="float-left" src="./image/ic_NumberBaseball.png" alt="NumberBaseball">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/download_app1_download.html" class="btn btn-primary">숫자 야구 게임<br>다운 받으러 가기</a></p>
+                            <p><a href="#header" onclick="download_app1()" class="btn btn-primary">숫자 야구 게임<br>다운 받으러 가기</a></p>
                         </div>
                         <div class="float-left">
                             <h3>숫자 야구 게임이란?</h3><br>
@@ -196,7 +196,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="card-body row">
+                    <div class="card-body">
                         <div class="float-left">
                             <h3>숫자 야구 게임2란?</h3><br>
                             <label>
@@ -208,16 +208,16 @@
                             </label>
                         </div>
                         <div class="float-left">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app2_introduce.html" class="btn btn-primary">숫자 야구 게임2<br>소개 보러가기</a></p>
+                            <p><a href="#header" onclick="introduce_app2()" class="btn btn-primary">숫자 야구 게임2<br>소개 보러가기</a></p>
                             <img class="float-left" src="./image/ic_NumberBaseball2.png" alt="NumberBaseball2">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/download_app2_download.html" class="btn btn-primary">숫자 야구 게임2<br>다운 받으러 가기</a></p>
+                            <p><a href="#header" onclick="download_app2()" class="btn btn-primary">숫자 야구 게임2<br>다운 받으러 가기</a></p>
                         </div>
                     </div>
-                    <div class="card-body row">
+                    <div class="card-body">
                         <div class="float-left">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app3_introduce.html" class="btn btn-primary">click click 게임<br>소개 보러가기</a></p>
+                            <p><a href="#header" onclick="introduce_app3()" class="btn btn-primary">click click 게임<br>소개 보러가기</a></p>
                             <img class="float-left" src="./image/ic_ClickClick.png" alt="ClickClick">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/download_app3_download.html" class="btn btn-primary">click click 게임<br>다운 받으러 가기</a></p>
+                            <p><a href="#header" onclick="download_app3()" class="btn btn-primary">click click 게임<br>다운 받으러 가기</a></p>
                         </div>
                         <div class="float-left">
                             <h3>Click Click 게임이란?</h3><br>
@@ -228,7 +228,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="card-body row">
+                    <div class="card-body">
                         <div class="float-left">
                             <h3>지뢰찾기 게임이란?</h3><br>
                             <label>
@@ -239,16 +239,16 @@
                             </label>
                         </div>
                         <div class="float-left">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app4_introduce.html" class="btn btn-primary">지뢰찾기 게임<br>소개 보러가기</a></p>
+                            <p><a href="#header" onclick="introduce_app4()" class="btn btn-primary">지뢰찾기 게임<br>소개 보러가기</a></p>
                             <img class="float-left" src="./image/ic_Mine.png" alt="mine">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/download_app4_download.html" class="btn btn-primary">지뢰찾기 게임<br>다운 받으러 가기</a></p>
+                            <p><a href="#header" onclick="download_app4()" class="btn btn-primary">지뢰찾기 게임<br>다운 받으러 가기</a></p>
                         </div>
                     </div>
-                    <div class="card-body row">
+                    <div class="card-body">
                         <div class="float-left">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app5_introduce.html" class="btn btn-primary">미로탈출 게임<br>소개 보러가기</a></p>
+                            <p><a href="#header" onclick="introduce_app5()" class="btn btn-primary">미로탈출 게임<br>소개 보러가기</a></p>
                             <img class="float-left" src="./image/ic_Maze.png" alt="Maze">
-                            <p><a href="http://developer3.dothome.co.kr/WebProject/download_app5_download.html" class="btn btn-primary">미로탈출 게임<br>다운 받으러 가기</a></p>
+                            <p><a href="#header" onclick="download_app5()" class="btn btn-primary">미로탈출 게임<br>다운 받으러 가기</a></p>
                         </div>
                         <div class="float-left">
                             <h3>미로탈출 게임이란?</h3><br>
