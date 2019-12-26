@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TAK's app</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+        <style>
+            header ul{width: 100%;}
+            header li{text-align: center;}
+
+            #content{display: flex; padding: 0px;}
+            body>div>nav{border: 1px solid black; min-width: 200px;}
+            body>div>section{border: 1px solid black; flex-grow: 1;}
+            
+            footer{margin-top: 10px;}
+            footer>ul{list-style: none;}
+            footer>ul>li:first-child{margin-top: auto; margin-bottom: auto; font-size: 25px;}
+            footer>ul>li:nth-child(2){margin-top: auto; margin-bottom: auto;}
+            footer>ul>li:last-child{text-align: right;}
+            
+            @media(max-width: 992px){ #menu{display: none;} }
+        </style>
+
+        <script>
+            function introduce(){
+                var display = $('#introduce_div').css('display');
+                if(display=='none'){
+                    $('#introduce_div').css('display', '');
+                }else{
+                    $('#introduce_div').css('display', 'none');
+                }
+            }
+            function introduce_app1(){
+                $('span').css('color', '');
+                $('#introduce_span1').css('color', 'red');
+                $('section').load('introduce_app1_introduce.html');
+            }
+            function introduce_app2(){
+                $('span').css('color', '');
+                $('#introduce_span2').css('color', 'red');
+                $('section').load('introduce_app2_introduce.html');
+            }
+            function introduce_app3(){
+                $('span').css('color', '');
+                $('#introduce_span3').css('color', 'red');
+                $('section').load('introduce_app3_introduce.html');
+            }
+            function introduce_app4(){
+                $('span').css('color', '');
+                $('#introduce_span4').css('color', 'red');
+                $('section').load('introduce_app4_introduce.html');
+            }
+            function introduce_app5(){
+                $('span').css('color', '');
+                $('#introduce_span5').css('color', 'red');
+                $('section').load('introduce_app5_introduce.html');
+            }
+
+            function down(){
+                var display = $('#download_div').css('display');
+                if(display=='none'){
+                    $('#download_div').css('display', '');
+                }else{
+                    $('#download_div').css('display', 'none');
+                }
+            }
+            function download_app1(){
+                $('span').css('color', '');
+                $('#download_span1').css('color', 'red');
+                $('section').load('download_app1_download.html');
+            }
+            function download_app2(){
+                $('span').css('color', '');
+                $('#download_span2').css('color', 'red');
+                $('section').load('download_app2_download.html');
+            }
+            function download_app3(){
+                $('span').css('color', '');
+                $('#download_span3').css('color', 'red');
+                $('section').load('download_app3_download.html');
+            }
+            function download_app4(){
+                $('span').css('color', '');
+                $('#download_span4').css('color', 'red');
+                $('section').load('download_app4_download.html');
+            }
+            function download_app5(){
+                $('span').css('color', '');
+                $('#download_span5').css('color', 'red');
+                $('section').load('download_app5_download.html');
+            }
+
+            function database(){
+                var display = $('#database_div').css('display');
+                if(display=='none'){
+                    $('#database_div').css('display', '');
+                }else{
+                    $('#database_div').css('display', 'none');
+                }
+            }
+            function database_app1(){
+                $('span').css('color', '');
+                $('#database_span1').css('color', 'red');
+                $('section').load('database_app1_database.html');
+            }
+
+            function profile(){
+                window.open("http://developer3.dothome.co.kr/WebProject/profile.html", "new_win", 'width=355, height=510, left='+(screen.availWidth/2-177)+', top='+(screen.availHeight/2-255)+', toolbars=no, menubars=no, scrollbars=no, resizable=no');
+            }
+        </script>
+
+    </head>
+    <body>
+        <header id="header" class="container bg-dark">
+            <h1 class="text-light text-center">TAK's app</h1>
+            <img class="img-fluid mx-auto d-block" src="./image/android image.png" alt="android">
+            <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item col"><a href="#" class="nav-link active">앱 소개</a></li>
+                        <li class="nav-item col"><a href="#" class="nav-link">버그 신고</a></li>
+                        <li class="nav-item col"><a href="#" class="nav-link">문의</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div id="content" class="container">
+            <nav id="menu">
+                <h3>메뉴</h3>
+                <ul>
+                    <li>
+                        <a id="introduce" href="#introduce" onclick="introduce()">앱 소개
+                            <div id="introduce_div" style="display: none;">
+                                <ul>
+                                    <li><a href="#header" onclick="introduce_app1()"><span id="introduce_span1">숫자 야구 게임</span></a></li>
+                                    <li><a href="#header" onclick="introduce_app2()"><span id="introduce_span2">숫자 야구 게임2</span></a></li>
+                                    <li><a href="#header" onclick="introduce_app3()"><span id="introduce_span3">click click 게임</span></a></li>
+                                    <li><a href="#header" onclick="introduce_app4()"><span id="introduce_span4">지뢰찾기 게임</span></a></li>
+                                    <li><a href="#header" onclick="introduce_app5()"><span id="introduce_span5">미로탈출 게임</span></a></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="download" href="#download" onclick="down()">앱 다운로드
+                            <div id="download_div" style="display: none;">
+                                <ul>
+                                    <li><a href="#header" onclick="download_app1()"><span id="download_span1">숫자 야구 게임</span></a></li>
+                                    <li><a href="#header" onclick="download_app2()"><span id="download_span2">숫자 야구 게임2</span></a></li>
+                                    <li><a href="#header" onclick="download_app3()"><span id="download_span3">click click 게임</span></a></li>
+                                    <li><a href="#header" onclick="download_app4()"><span id="download_span4">지뢰찾기 게임</span></a></li>
+                                    <li><a href="#header" onclick="download_app5()"><span id="download_span5">미로탈출 게임</span></a></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="database" href="#database" onclick="database()">데이터베이스
+                            <div id="database_div" style="display: none;">
+                                <ul>
+                                    <li><a href="#header" onclick="database_app1()"><span id="database_span1">미로탈출 게임</span></a></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <section>
+                <div class="card">
+                    <div class="card-body row" style="border: 1px solid black; margin: 5px;">
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app1_introduce.html" class="btn btn-primary">숫자 야구 게임<br>소개 보러가기</a></p>
+                            <img style="width: 100%; height: auto;" class="float-left" src="./image/ic_NumberBaseball.png" alt="NumberBaseball">
+                        </div>
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <h3>숫자 야구 게임이란?</h3><br>
+                            <label>
+                                100이상 ~ 1000 미만의 3자리 숫자 중 서로 다른 3자리 숫자로 이루어진 숫자를 찾는 게임입니다.<br>
+                                각각 100의 자리, 10의 자리, 1의 자리 숫자를 입력.<br>
+                                각 자릿수의 위치와 숫자가 맞으면 각각 1strike,<br>
+                                위치는 다르지만 3자리 숫자에 포함된 숫자면 1ball.<br>
+                                3자리 숫자가 모두 맞아서 3strike가 되면 클리어.<br>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-body row" style="border: 1px solid black; margin: 5px;">
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <h3>숫자 야구 게임2란?</h3><br>
+                            <label>
+                                100 ~ 999의 3자리 숫자 중 서로 다른 3자리 숫자로 이루어진 숫자를 찾는 게임입니다.<br>
+                                각각 100의 자리, 10의 자리, 1의 자리 숫자를 입력.<br>
+                                각 자릿수의 위치와 숫자가 맞으면 각각 1strike,<br>
+                                위치는 다르지만 3자리 숫자에 포함된 숫자면 1ball.<br>
+                                3자리 숫자가 모두 맞아서 3strike가 되면 클리어.<br>
+                            </label>
+                        </div>
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app2_introduce.html" class="btn btn-primary">숫자 야구 게임2<br>소개 보러가기</a></p>
+                            <img style="width: 100%; height: auto;" class="float-left" src="./image/ic_NumberBaseball2.png" alt="NumberBaseball2">
+                        </div>
+                    </div>
+                    <div class="card-body row" style="border: 1px solid black; margin: 5px;">
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app3_introduce.html" class="btn btn-primary">click click 게임<br>소개 보러가기</a></p>
+                            <img style="width: 100%; height: auto;" class="float-left" src="./image/ic_ClickClick.png" alt="ClickClick">
+                        </div>
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <h3>Click Click 게임이란?</h3><br>
+                            <label>
+                                ClickClick은 정해진 시간 동안 1부터 12까지 순서대로 클릭하여 점수를 올리는 게임입니다.<br>
+                                순서대로 누르면 해당 버튼이 사라지며 점수가 증가합니다.<br>
+                                순서대로 누르지 않으면 버튼이 사라지지 않으며 점수가 감소합니다.<br>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-body row" style="border: 1px solid black; margin: 5px;">
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <h3>지뢰찾기 게임이란?</h3><br>
+                            <label>
+                                지뢰를 피해서 지뢰밭의 모든 버튼을 제거하는 게임입니다.<br>
+                                버튼 클릭시 숫자 또는 지뢰가 나타나며, 지뢰를 밟을시 게임오버 됩니다.<br>
+                                숫자가 나오면, 그 숫자 주위 8방향의 버튼 중에 지뢰가 그 숫자 만큼 존재한다는 것을 뜻합니다.<br>
+                                일반적인 지뢰찾기의 초급 난이도 버전의 앱입니다.<br>
+                            </label>
+                        </div>
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app4_introduce.html" class="btn btn-primary">지뢰찾기 게임<br>소개 보러가기</a></p>
+                            <img style="width: 100%; height: auto;" class="float-left" src="./image/ic_Mine.png" alt="mine">
+                        </div>
+                    </div>
+                    <div class="card-body row" style="border: 1px solid black; margin: 5px;">
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <p><a href="http://developer3.dothome.co.kr/WebProject/introduce_app5_introduce.html" class="btn btn-primary">미로탈출 게임<br>소개 보러가기</a></p>
+                            <img style="width: 100%; height: auto;" class="float-left" src="./image/ic_Maze.png" alt="Maze">
+                        </div>
+                        <div class="float-left" style="width: 45%; margin: 10px; text-align: center;">
+                            <h3>미로탈출 게임이란?</h3><br>
+                            <label>
+                                조이스틱 또는 버튼을 눌러 케릭터를 움직여서 미로를 탈출하는 게임입니다.<br>
+                                ArcadeMode로 자동으로 만들어지는 랜덤 미로를 플레이 하거나.<br>
+                                FreeMode로 하고싶은 스테이지를 선택해서 플레이 할 수 있습니다.<br>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer name="footer" class="container">
+            <ul class="row bg-dark text-light">
+                <li class="col font-weight-bold">Tak's app</li>
+                <li class="col"><a href="#footer" onclick="profile()">개발자 정보</a></li>
+                <li class="col"><sub>Copyright 2019. hyungtak. all rights reserved.</sub></li>
+            </ul>
+        </footer>
+    </body>
+</html>
