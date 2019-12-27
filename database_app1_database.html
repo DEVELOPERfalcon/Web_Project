@@ -11,6 +11,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
         <style>
+            .container{border: 1px solid black;}
+            #best{margin-left: 20px;}
+            #inputNickname{width: 300px;}
+            section{margin-top: 10px; padding: 10px;}
             @media(min-width: 1200px){ 
                 header{width: 940px;}
                 section{width: 940px;}
@@ -55,26 +59,26 @@
         </script>
     </head>
     <body>
-        <header class="container" style=" border: 1px solid black;">
+        <header class="container">
             <h2>MAZEescape 유저별 최고기록</h2>
             <p><br>
                 <button onclick="record_all()">전체 기록 검색</button>
-                <button onclick="record_best()" style="margin-left: 20px;">stage별 최고기록 검색</button>
+                <button id="best" onclick="record_best()">stage별 최고기록 검색</button>
             </p>
             <br>
             <p>내 기록과 최고기록 비교하기</p>
             <div>
                 <label>닉네임 입력:</label>
-                <input id="inputNickname" type="text" placeholder="최고기록과 비교할 닉네임을 입력하세요." style="width: 300px;">
+                <input id="inputNickname" type="text" placeholder="최고기록과 비교할 닉네임을 입력하세요.">
                 <button onclick="record_compare()">검색</button>
             </div>
         </header>
-        <section class="container" style="margin-top: 10px; padding: 10px; border: 1px solid black;">
+        <section class="container">
             <p>검색 결과</p>
             <div id="target" style="width: 100%; overflow: auto;">
 
             </div>
-        </section class="container">
+        </section>
 
     </body>
 </html>
