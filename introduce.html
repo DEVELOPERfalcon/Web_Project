@@ -16,7 +16,7 @@
 
             #content{display: flex; padding: 0px;}
             body>div>nav{border: 1px solid black; min-width: 200px;}
-            body>div>section{border: 1px solid black; flex-grow: 1;}
+            body>div>section{border: 1px solid black; flex-grow: 1; max-width: 940px;}
             section>div>div{border: 1px solid black; margin: 5px;}
             section>div>div>div{width: 45%; margin: 5px; display: flex; flex-direction: column; align-items: center;}
             section img{width: 80%; height: auto; margin-bottom: 10px;}
@@ -102,9 +102,9 @@
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navMenu">
                     <ul class="nav nav-tabs">
-                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/introduce.html" class="nav-link active">앱 소개</a></li>
-                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/bug.html" class="nav-link">버그 신고</a></li>
-                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/question.html" class="nav-link">문의</a></li>
+                        <li class="nav-item col"><a href="#" class="nav-link active">앱 소개</a></li>
+                        <li class="nav-item col"><a href="#" class="nav-link">버그 신고</a></li>
+                        <li class="nav-item col"><a href="#" class="nav-link">문의</a></li>
                     </ul>
                 </div>
             </nav>
@@ -115,7 +115,7 @@
                 <h3>메뉴</h3>
                 <ul>
                     <li>
-                        <a id="introduce" href="#navMenu" onclick="introduce()">앱 소개
+                        <a id="introduce" href="#introduce" onclick="introduce()">앱 소개
                             <div id="introduce_div" style="display: none;">
                                 <ul>
                                     <li><a href="#header" onclick="introduce_app1()"><span id="introduce_span1">숫자 야구 게임</span></a></li>
@@ -128,7 +128,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="download" href="#navMenu" onclick="down()">앱 다운로드
+                        <a id="download" href="#download" onclick="down()">앱 다운로드
                             <div id="download_div" style="display: none;">
                                 <ul>
                                     <li><a href="https://play.google.com/store/apps/details?id=kr.co.taksoft.numbaseballgame"><span id="download_span1">숫자 야구 게임</span></a></li>
@@ -141,7 +141,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="database" href="#navMenu" onclick="database()">데이터베이스
+                        <a id="database" href="#database" onclick="database()">데이터베이스
                             <div id="database_div" style="display: none;">
                                 <ul>
                                     <li><a href="#header" onclick="database_app1()"><span id="database_span1">미로탈출 게임</span></a></li>

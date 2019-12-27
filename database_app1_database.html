@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MAZEescape</title>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <style>
+            @media(min-width: 1200px){ 
+                header{width: 940px;}
+                section{width: 940px;}
+            }
+            @media(min-width: 992px){ 
+                header{width: 760px;}
+                section{width: 760px;}
+            }
+            @media(min-width: 768px){ 
+                header{width: 520px;}
+                section{width: 520px;}
+            }
+            @media(min-width: 576px){ 
+                header{width: 340px;}
+                section{width: 340px;}
+            }
+            @media(max-width: 576px){ 
+                header{width: 100%;}
+                section{width: 100%;}
+            }
+        </style>
+
+        <script>
+            function record_all(){
+                $('#target').load('maze_record_all.php');
+            }
+            function record_best(){
+                $('#target').load('maze_record_best.php');
+            }
+            function record_compare(){
+                $.ajax({
+                   url: "http://developer3.dothome.co.kr/WebProject/maze_record_compare.php?nickname="+$('#inputNickname').val(),
+                   type: "GET",
+                   success: function(data){
+                       $('#target').html(data);
+                   },
+                   error: function(error){
+                       $('#target').html(error.responseText);
+                   }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header class="container" style=" border: 1px solid black;">
+            <h2>MAZEescape 유저별 최고기록</h2>
+            <p><br>
+                <button onclick="record_all()">전체 기록 검색</button>
+                <button onclick="record_best()" style="margin-left: 20px;">stage별 최고기록 검색</button>
+            </p>
+            <br>
+            <p>내 기록과 최고기록 비교하기</p>
+            <div>
+                <label>닉네임 입력:</label>
+                <input id="inputNickname" type="text" placeholder="최고기록과 비교할 닉네임을 입력하세요." style="width: 300px;">
+                <button onclick="record_compare()">검색</button>
+            </div>
+        </header>
+        <section class="container" style="margin-top: 10px; padding: 10px; border: 1px solid black;">
+            <p>검색 결과</p>
+            <div id="target" style="width: 100%; overflow: auto;">
+
+            </div>
+        </section class="container">
+
+    </body>
+</html>
