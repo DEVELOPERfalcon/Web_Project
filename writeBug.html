@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TAK's app</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+        <style>
+            header ul{width: 100%;}
+            header li{text-align: center;}
+            table{width: 100%;}
+            tr{width: 100%;}
+            tr>td:first-child{width: 120px;}
+            .changeSize{width: 95%;}
+
+            footer{margin-top: 10px;}
+            footer>ul{list-style: none;}
+            footer>ul>li:first-child{margin-top: auto; margin-bottom: auto; font-size: 25px;}
+            footer>ul>li:nth-child(2){margin-top: auto; margin-bottom: auto;}
+            footer>ul>li:last-child{text-align: right;}
+        </style>
+
+        <script>
+            $(document).ready(function(){
+                $('#target').load('http://developer3.dothome.co.kr/WebProject/bug.php');
+            });
+            
+            function profile(){
+                window.open("http://developer3.dothome.co.kr/WebProject/profile.html", "new_win", 'width=355, height=510, left='+(screen.availWidth/2-177)+', top='+(screen.availHeight/2-255)+', toolbars=no, menubars=no, scrollbars=no, resizable=no');
+            }
+        </script>
+
+    </head>
+    <body>
+        <header class="container bg-dark">
+            <h1 class="text-light text-center">TAK's app</h1>
+            <img class="img-fluid mx-auto d-block" src="./image/android image.png" alt="android">
+            <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/introduce.html" class="nav-link">앱 소개</a></li>
+                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/bug.html" class="nav-link active">버그 신고</a></li>
+                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/question.html" class="nav-link">문의</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <section class="container" style="border: 1px solid black;">
+            <h2>버그 게시물 작성</h2>
+            <form action="http://developer3.dothome.co.kr/WebProject/writeBug.php" method="POST">
+                <table>
+                    <tr>
+                        <td>제목:</td>
+                        <td><input name="title" class="changeSize" type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td>기종:</td>
+                        <td><input name="type" class="changeSize" type="text" required></td>
+                        <!-- <td>
+                            <select name="list" id="type">
+                                <optgroup label="브랜드 선택">
+                                    <option value="ACER">ACER</option>
+                                    <option value="ALCATEL">ALCATEL</option>
+                                    <option value="ALLVIEW">ALLVIEW</option>
+                                    <option value="AMAZON">AMAZON</option>
+                                    <option value="AMOI">AMOI</option>
+                                    <option value="APPLE">APPLE</option>
+                                    <option value="ARCHOS">ARCHOS</option>
+                                    <option value="ASUS">ASUS</option>
+                                    <option value="AT&T">AT&T</option>
+                                    <option value="BENEFON">BENEFON</option>
+                                    <option value="BENQ">BENQ</option>
+                                    <option value="BENQ-SIEMENS">BENQ-SIEMENS</option>
+                                    <option value="BIRD">BIRD</option>
+                                    <option value="BLACKBERRY">BLACKBERRY</option>
+                                    <option value="BLACKVIEW">BLACKVIEW</option>
+                                    <option value="BLU">BLU</option>
+                                    <option value="BOSCH">BOSCH</option>
+                                    <option value="BQ">BQ</option>
+                                    <option value="CASIO">CASIO</option>
+                                    <option value="CAT">CAT</option>
+                                    <option value="CELKON">CELKON</option>
+                                    <option value="CHEA">CHEA</option>
+                                    <option value="COOLPAD">COOLPAD</option>
+                                    <option value="DELL">DELL</option>
+                                    <option value="EMPORIA">EMPORIA</option>
+                                    <option value="ENERGIZER">ENERGIZER</option>
+                                    <option value="ERICSSON">ERICSSON</option>
+                                    <option value="ETEN">ETEN</option>
+                                    <option value="FUJITSU SIEMENS">FUJITSU SIEMENS</option>
+                                    <option value="GARMIN-ASUS">GARMIN-ASUS</option>
+                                    <option value="GIGABYTE">GIGABYTE</option>
+                                    <option value="GIONEE">GIONEE</option>
+                                    <option value="GOOGLE">GOOGLE</option>
+                                    <option value="HAIER">HAIER</option>
+                                    <option value="HONOR">HONOR</option>
+                                    <option value="HP">HP</option>
+                                    <option value="HTC">HTC</option>
+                                    <option value="HUAWEI">HUAWEI</option>
+                                    <option value="I-MATE">I-MATE</option>
+                                    <option value="I-MOBILE">I-MOBILE</option>
+                                    <option value="ICEMOBILE">ICEMOBILE</option>
+                                    <option value="INFINIX">INFINIX</option>
+                                    <option value="INNOSTREAM">INNOSTREAM</option>
+                                    <option value="INQ">INQ</option>
+                                    <option value="INTEX">INTEX</option>
+                                    <option value="JOLLA">JOLLA</option>
+                                    <option value="KARBONN">KARBONN</option>
+                                    <option value="KYOCERA">KYOCERA</option>
+                                    <option value="LAVA">LAVA</option>
+                                    <option value="LEECO">LEECO</option>
+                                    <option value="LENOVO">LENOVO</option>
+                                    <option value="LG">LG</option>
+                                    <option value="MAXON">MAXON</option>
+                                    <option value="MAXWEST">MAXWEST</option>
+                                    <option value="MEIZU">MEIZU</option>
+                                    <option value="MICROMAX">MICROMAX</option>
+                                    <option value="MICROSOFT">MICROSOFT</option>
+                                    <option value="MITAC">MITAC</option>
+                                    <option value="MITSUBISHI">MITSUBISHI</option>
+                                    <option value="MODU">MODU</option>
+                                    <option value="MOTOROLA">MOTOROLA</option>
+                                    <option value="MWG">MWG</option>
+                                    <option value="NEC">NEC</option>
+                                    <option value="NEONODE">NEONODE</option>
+                                    <option value="NIU">NIU</option>
+                                    <option value="NOKIA">NOKIA</option>
+                                    <option value="NVIDIA">NVIDIA</option>
+                                    <option value="O2">O2</option>
+                                    <option value="ONEPLUS">ONEPLUS</option>
+                                    <option value="OPPO">OPPO</option>
+                                    <option value="ORANGE">ORANGE</option>
+                                    <option value="PALM">PALM</option>
+                                    <option value="PANASONIC">PANASONIC</option>
+                                    <option value="PANTECH">PANTECH</option>
+                                    <option value="PARLA">PARLA</option>
+                                    <option value="PHILIPS">PHILIPS</option>
+                                    <option value="PLUM">PLUM</option>
+                                    <option value="POSH">POSH</option>
+                                    <option value="PRESTIGIO">PRESTIGIO</option>
+                                    <option value="QMOBILE">QMOBILE</option>
+                                    <option value="QTEK">QTEK</option>
+                                    <option value="RAZER">RAZER</option>
+                                    <option value="REALME">REALME</option>
+                                    <option value="SAGEM">SAGEM</option>
+                                    <option value="SAMSUNG">SAMSUNG</option>
+                                    <option value="SENDO">SENDO</option>
+                                    <option value="SEWON">SEWON</option>
+                                    <option value="SHARP">SHARP</option>
+                                    <option value="SIEMENS">SIEMENS</option>
+                                    <option value="SONIM">SONIM</option>
+                                    <option value="SONY">SONY</option>
+                                    <option value="SONY ERICSSON">SONY ERICSSON</option>
+                                    <option value="SPICE">SPICE</option>
+                                    <option value="T-MOBILE">T-MOBILE</option>
+                                    <option value="TECNO">TECNO</option>
+                                    <option value="TEL.ME.">TEL.ME.</option>
+                                    <option value="TELIT">TELIT</option>
+                                    <option value="THURAYA">THURAYA</option>
+                                    <option value="TOSHIBA">TOSHIBA</option>
+                                    <option value="UNNECTO">UNNECTO</option>
+                                    <option value="VERTU">VERTU</option>
+                                    <option value="VERYKOOL">VERYKOOL</option>
+                                    <option value="VIVO">VIVO</option>
+                                    <option value="VK MOBILE">VK MOBILE</option>
+                                    <option value="VODAFONE">VODAFONE</option>
+                                    <option value="WIKO">WIKO</option>
+                                    <option value="WND">WND</option>
+                                    <option value="XCUTE">XCUTE</option>
+                                    <option value="XIAOMI">XIAOMI</option>
+                                    <option value="XOLO">XOLO</option>
+                                    <option value="YEZZ">YEZZ</option>
+                                    <option value="YOTA">YOTA</option>
+                                    <option value="YU">YU</option>
+                                    <option value="ZTE">ZTE</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>기종:</td>
+                        <td>
+                            <select name="list2" id="type2">
+                                <optgroup label="기종 선택">
+                                    <option class="list ACER" value="Chromebook Tab 10">Chromebook Tab 10</option>
+                                    <option class="list ACER" value="Iconia Talk S">Iconia Talk S</option>
+                                    <option class="list ACER" value="Liquid Z6 Plus">Liquid Z6 Plus</option>
+                                    <option class="list ACER" value="Liquid Z6">Liquid Z6</option>
+                                    <option class="list ACER" value="Iconia Tab 10 A3-A40">Iconia Tab 10 A3-A40</option>
+                                    <option class="list ACER" value="Liquid X2">Liquid X2</option>
+                                    <option class="list ACER" value="Liquid Jade 2">Liquid Jade 2</option>
+                                    <option class="list ACER" value="Liquid Zest Plus">Liquid Zest Plus</option>
+                                    <option class="list ACER" value="Liquid Zest">Liquid Zest</option>
+                                    <option class="list ACER" value="Predator 8">Predator 8</option>
+                                    <option class="list ACER" value="Liquid Jade Primo">Liquid Jade Primo</option>
+                                    <option class="list ACER" value="Liquid Z330">Liquid Z330</option>
+                                    <option class="list ACER" value="Liquid Z320">Liquid Z320</option>
+                                    <option class="list ACER" value="Liquid Z630S">Liquid Z630S</option>
+                                    <option class="list ACER" value="Liquid Z630">Liquid Z630</option>
+                                    <option class="list ACER" value="Liquid Z530S">Liquid Z530S</option>
+                                    <option class="list ACER" value="Liquid Z530">Liquid Z530</option>
+                                    <option class="list ACER" value="Liquid M330">Liquid M330</option>
+                                    <option class="list ACER" value="Liquid M320">Liquid M320</option>
+                                    <option class="list ACER" value="Iconia Tab 10 A3-A30">Iconia Tab 10 A3-A30</option>
+                                    <option class="list ACER" value="Iconia One 8 B1-820">Iconia One 8 B1-820</option>
+                                    <option class="list ACER" value="Iconia Tab A3-A20">Iconia Tab A3-A20</option>
+                                    <option class="list ACER" value="Iconia Tab A3-A20FHD">Iconia Tab A3-A20FHD</option>
+                                    <option class="list ACER" value="Liquid Jade Z">Liquid Jade Z</option>
+                                    <option class="list ACER" value="Liquid Z520">Liquid Z520</option>
+                                    <option class="list ACER" value="Liquid Z220">Liquid Z220</option>
+                                    <option class="list ACER" value="Liquid M220">Liquid M220</option>
+                                    <option class="list ACER" value="Liquid Z410">Liquid Z410</option>
+                                    <option class="list ACER" value="Liquid Jade S">Liquid Jade S</option>
+                                    <option class="list ACER" value="Liquid Z500">Liquid Z500</option>
+                                    <option class="list ACER" value="Liquid X1">Liquid X1</option>
+                                    <option class="list ACER" value="Liquid Jade">Liquid Jade</option>
+                                    <option class="list ACER" value="Liquid E700">Liquid E700</option>
+                                    <option class="list ACER" value="Liquid E600">Liquid E600</option>
+                                    <option class="list ACER" value="Liquid Z200">Liquid Z200</option>
+                                    <option class="list ACER" value="Iconia Tab 8 A1-840FHD">Iconia Tab 8 A1-840FHD</option>
+                                    <option class="list ACER" value="Iconia Tab 7 A1-713HD">Iconia Tab 7 A1-713HD</option>
+                                    <option class="list ACER" value="Iconia Tab 7 A1-713">Iconia Tab 7 A1-713</option>
+                                    <option class="list ACER" value="Iconia One 7 B1-730">Iconia One 7 B1-730</option>
+                                    <option class="list ACER" value="Liquid E3 Duo Plus">Liquid E3 Duo Plus</option>
+                                    <option class="list ACER" value="Liquid E3">Liquid E3</option>
+                                    <option class="list ACER" value="Liquid Z4">Liquid Z4</option>
+                                    <option class="list ACER" value="Iconia B1-721">Iconia B1-721</option>
+                                    <option class="list ACER" value="Iconia B1-720">Iconia B1-720</option>
+                                    <option class="list ACER" value="Iconia A1-830">Iconia A1-830</option>
+                                    <option class="list ACER" value="Liquid Z5">Liquid Z5</option>
+                                    <option class="list ACER" value="Liquid S2">Liquid S2</option>
+                                    <option class="list ACER" value="Liquid Z3">Liquid Z3</option>
+                                    <option class="list ACER" value="Liquid S1">Liquid S1</option>
+                                    <option class="list ACER" value="Iconia Tab A3">Iconia Tab A3</option>
+                                    <option class="list ACER" value="Iconia Tab A1-811">Iconia Tab A1-811</option>
+                                    <option class="list ACER" value="Iconia Tab A1-810">Iconia Tab A1-810</option>
+                                    <option class="list ACER" value="Liquid E2">Liquid E2</option>
+                                    <option class="list ACER" value="Liquid Z2">Liquid Z2</option>
+                                    <option class="list ACER" value="Liquid C1">Liquid C1</option>
+                                    <option class="list ACER" value="Liquid E1">Liquid E1</option>
+                                    <option class="list ACER" value="Iconia Tab B1-710">Iconia Tab B1-710</option>
+                                    <option class="list ACER" value="Iconia Tab B1-A71">Iconia Tab B1-A71</option>
+                                    <option class="list ACER" value="Iconia Tab A110">Iconia Tab A110</option>
+                                    <option class="list ACER" value="Liquid Z110">Liquid Z110</option>
+                                    <option class="list ACER" value="Liquid Gallant E350">Liquid Gallant E350</option>
+                                    <option class="list ACER" value="Liquid Gallant Duo">Liquid Gallant Duo</option>
+                                    <option class="list ACER" value="Liquid Glow E330">Liquid Glow E330</option>
+                                    <option class="list ACER" value="CloudMobile S500">CloudMobile S500</option>
+                                    <option class="list ACER" value="Iconia Tab A210">Iconia Tab A210</option>
+                                    <option class="list ACER" value="Iconia Tab A200">Iconia Tab A200</option>
+                                    <option class="list ACER" value="Iconia Tab A701">Iconia Tab A701</option>
+                                    <option class="list ACER" value="Iconia Tab A700">Iconia Tab A700</option>
+                                    <option class="list ACER" value="Iconia Tab A511">Iconia Tab A511</option>
+                                    <option class="list ACER" value="Iconia Tab A510">Iconia Tab A510</option>
+                                    <option class="list ACER" value="Allegro">Allegro</option>
+                                    <option class="list ACER" value="Liquid Express E320">Liquid Express E320</option>
+                                    <option class="list ACER" value="Iconia Tab A501">Iconia Tab A501</option>
+                                    <option class="list ACER" value="Iconia Smart">Iconia Smart</option>
+                                    <option class="list ACER" value="Iconia Tab A500">Iconia Tab A500</option>
+                                    <option class="list ACER" value="Iconia Tab A101">Iconia Tab A101</option>
+                                    <option class="list ACER" value="Iconia Tab A100">Iconia Tab A100</option>
+                                    <option class="list ACER" value="Liquid mini E310">Liquid mini E310</option>
+                                    <option class="list ACER" value="beTouch E210">beTouch E210</option>
+                                    <option class="list ACER" value="beTouch E140">beTouch E140</option>
+                                    <option class="list ACER" value="Liquid mt">Liquid mt</option>
+                                    <option class="list ACER" value="beTouch T500">beTouch T500</option>
+                                    <option class="list ACER" value="beTouch E130">beTouch E130</option>
+                                    <option class="list ACER" value="beTouch E120">beTouch E120</option>
+                                    <option class="list ACER" value="Stream">Stream</option>
+                                    <option class="list ACER" value="Liquid E">Liquid E</option>
+                                    <option class="list ACER" value="neoTouch P400">neoTouch P400</option>
+                                    <option class="list ACER" value="beTouch E400">beTouch E400</option>
+                                    <option class="list ACER" value="neoTouch P300">neoTouch P300</option>
+                                    <option class="list ACER" value="beTouch E110">beTouch E110</option>
+                                    <option class="list ACER" value="Liquid">Liquid</option>
+                                    <option class="list ACER" value="neoTouch">neoTouch</option>
+                                    <option class="list ACER" value="beTouch E200">beTouch E200</option>
+                                    <option class="list ACER" value="beTouch E100">beTouch E100</option>
+                                    <option class="list ACER" value="beTouch E101">beTouch E101</option>
+                                    <option class="list ACER" value="DX650">DX650</option>
+                                    <option class="list ACER" value="M900">M900</option>
+                                    <option class="list ACER" value="F900">F900</option>
+                                    <option class="list ACER" value="X960">X960</option>
+                                    <option class="list ACER" value="DX900">DX900</option>
+                                    <option class="list " value=""></option>
+                                </optgroup>
+                            </select>
+                        </td> -->
+                    </tr>
+                    <tr>
+                        <td>버그 발생 시간:</td>
+                        <td><input name="date" class="changeSize" type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td>내용:</td>
+                        <td><textarea name="content" class="changeSize" rows="10" required></textarea></td>
+                    </tr>
+                </table>
+                <p style="text-align: right;">
+                    <input type="reset" value="취소">
+                    <input type="submit" value="완료">
+                </p>
+            </form>            
+            
+        </section>
+
+
+        <footer name="footer" class="container">
+            <ul class="row bg-dark text-light">
+                <li class="col font-weight-bold">Tak's app</li>
+                <li class="col"><a href="#footer" onclick="profile()">개발자 정보</a></li>
+                <li class="col"><sub>Copyright 2019. hyungtak. all rights reserved.</sub></li>
+            </ul>
+        </footer>
+    </body>
+</html>

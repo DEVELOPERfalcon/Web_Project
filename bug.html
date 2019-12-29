@@ -14,10 +14,7 @@
             header ul{width: 100%;}
             header li{text-align: center;}
             
-            section .card{margin-top: 100px; margin-bottom: 10px; background-color: rgb(236, 235, 235);}
-            .btn{display: table; margin-right: auto; margin-left: auto;}
-            .card-body{display: flex; justify-content: center;}
-            section img{width: 190px; height: 338px; margin: 10px;}
+            
 
             footer{margin-top: 10px;}
             footer>ul{list-style: none;}
@@ -27,6 +24,9 @@
         </style>
 
         <script>
+            $(document).ready(function(){
+                $('#target').load('http://developer3.dothome.co.kr/WebProject/bug.php');
+            });
             function profile(){
                 window.open("http://developer3.dothome.co.kr/WebProject/profile.html", "new_win", 'width=355, height=510, left='+(screen.availWidth/2-177)+', top='+(screen.availHeight/2-255)+', toolbars=no, menubars=no, scrollbars=no, resizable=no');
             }
@@ -42,45 +42,20 @@
                 <div class="collapse navbar-collapse" id="navMenu">
                     <ul class="nav nav-tabs">
                         <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/introduce.html" class="nav-link">앱 소개</a></li>
-                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/bug.html" class="nav-link">버그 신고</a></li>
+                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/bug.html" class="nav-link active">버그 신고</a></li>
                         <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/question.html" class="nav-link">문의</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
+        <section class="container" style="border: 1px solid black;">
+            <h2>버그 게시판</h2>
+            <p><a href="http://developer3.dothome.co.kr/WebProject/writeBug.html" style="float: right;" class="btn btn-success">글쓰기</a></p>
+            <div id="target" style="width: 100%; overflow: auto;">
 
-        <section class="container">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title text-center">직접 공부하며 만든 앱을 소개합니다.</h4>
-                    <p class="card-text text-center">미래능력개발교육원에서 수업을 들으며 배운 Programming으로 앱들을 만들었습니다.</p>
-                    <p><a href="http://developer3.dothome.co.kr/WebProject/introduce.html" class="btn btn-primary">앱 구경 하러가기</a></p>
-                </div>
-                <div class="card-body row">
-                    <img class="float-left" src="./image/main_activity.png" alt="main_activity">
-                    <img class="float-left" src="./image/stage_select.png" alt="stage_select">
-                    <img class="float-left" src="./image/play.png" alt="play">
-                    <img class="float-left" src="./image/option.png" alt="option">
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title text-center">만든 앱들은 모두 배포되었습니다.</h4>
-                    <p class="card-text text-center">만든 앱들은 모두 배포가 완료되어 구글 플레이 스토어에서 다운로드 가능합니다.</p>
-                    <p><a href="http://developer3.dothome.co.kr/WebProject/introduce.html" class="btn btn-primary">다운로드 하러가기</a></p>
-                </div>
-                <div class="card-body row">
-                    <img class="float-left" src="./image/store maze.png" alt="main_activity">
-                    <img class="float-left" src="./image/store mine.png" alt="stage_select">
-                    <img class="float-left" src="./image/store click.png" alt="play">
-                    <img class="float-left" src="./image/store ball2.png" alt="option">
-                    <img class="float-left" src="./image/store ball1.png" alt="option">
-                </div>
             </div>
         </section>
-
 
         <footer name="footer" class="container">
             <ul class="row bg-dark text-light">
