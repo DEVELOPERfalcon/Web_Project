@@ -14,7 +14,7 @@
 	    if($i==0){
 	    	foreach ($row as $key => $value) {
                 if($key=="title"){
-                    $firstLine.="<td style='text-align:left;'><a href='http://developer3.dothome.co.kr/WebProject/bug2.html'>".$value."</a></td>";
+                    $firstLine.="<td style='text-align:left;'><a href='http://developer3.dothome.co.kr/WebProject/bug2.php?No=".($rowCount-$i)."'>".$value."</a></td>";
                 }else{
                     $firstLine.="<td>".$value."</td>";
                 }
@@ -24,7 +24,7 @@
 	    	$table.="<tr>";
 	    	foreach ($row as $key => $value) {
 	    		if($key=="title"){
-                    $table.="<td style='text-align:left;'><a href='http://developer3.dothome.co.kr/WebProject/bug2.php'>".$value."</a></td>";
+                    $table.="<td style='text-align:left;'><a href='http://developer3.dothome.co.kr/WebProject/bug2.php?No=".($rowCount-$i)."'>".$value."</a></td>";
                 }else{
                     $table.="<td>".$value."</td>";
                 }
