@@ -13,10 +13,13 @@
         <style>
             header ul{width: 100%;}
             header li{text-align: center;}
-            
+            table{width: 100%;}
+            tr{width: 100%;}
+            tr>td:first-child{width: 120px;}
+            .changeSize{width: 95%;}
+
             section{border: 1px solid black;}
-            section>p>a{float: right;}
-            #target{width: 100%; overflow: auto;}
+            form>p{text-align: right;}
 
             footer{margin-top: 10px;}
             footer>ul{list-style: none;}
@@ -26,9 +29,6 @@
         </style>
 
         <script>
-            $(document).ready(function(){
-                $('#target').load('http://developer3.dothome.co.kr/WebProject/bug.php');
-            });
             function profile(){
                 window.open("http://developer3.dothome.co.kr/WebProject/profile.html", "new_win", 'width=355, height=510, left='+(screen.availWidth/2-177)+', top='+(screen.availHeight/2-255)+', toolbars=no, menubars=no, scrollbars=no, resizable=no');
             }
@@ -44,20 +44,35 @@
                 <div class="collapse navbar-collapse" id="navMenu">
                     <ul class="nav nav-tabs">
                         <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/introduce.html" class="nav-link">앱 소개</a></li>
-                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/bug.html" class="nav-link active">버그 신고</a></li>
-                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/question.html" class="nav-link">문의</a></li>
+                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/bug.html" class="nav-link">버그 신고</a></li>
+                        <li class="nav-item col"><a href="http://developer3.dothome.co.kr/WebProject/question.html" class="nav-link active">문의</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
-        <section class="container">
-            <h2>버그 게시판</h2>
-            <p><a href="http://developer3.dothome.co.kr/WebProject/writeBug.html" class="btn btn-success">글쓰기</a></p>
-            <div id="target">
 
-            </div>
+        <section class="container">
+            <h2>문의 게시물 작성</h2>
+            <form action="http://developer3.dothome.co.kr/WebProject/writeQuestion.php" method="POST">
+                <table>
+                    <tr>
+                        <td>제목:</td>
+                        <td><input name="title" class="changeSize" type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td>내용:</td>
+                        <td><textarea name="content" class="changeSize" rows="10" required></textarea></td>
+                    </tr>
+                </table>
+                <p>
+                    <input type="reset" value="취소">
+                    <input type="submit" value="완료">
+                </p>
+            </form>            
+            
         </section>
+
 
         <footer name="footer" class="container">
             <ul class="row bg-dark text-light">
