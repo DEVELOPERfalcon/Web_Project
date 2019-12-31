@@ -2,7 +2,7 @@
 	header('Content-Type:text/html; charset=utf-8');
 	$connect=mysqli_connect("localhost", "developer3", "qwas2468!", "developer3");
 	mysqli_query($connect, "set names utf8");
-	$sql="select No, title, writeDate, count from question order by No desc";
+	$sql="select No, title, writeDate, count from suggest order by No desc";
 	$result=mysqli_query($connect, $sql);
 	$rowCount=mysqli_num_rows($result);
     
@@ -13,7 +13,7 @@
 	    $table.="<tr>";
 	    foreach ($row as $key => $value) {
 	    	if($key=="title"){
-                $table.="<td style='text-align:left;'><a href='http://developer3.dothome.co.kr/WebProject/question2.php?No=".($rowCount-$i)."'>".$value."</a></td>";
+                $table.="<td style='text-align:left;'><a href='http://developer3.dothome.co.kr/WebProject/suggest2.php?No=".($rowCount-$i)."'>".$value."</a></td>";
             }else{
                 $table.="<td>".$value."</td>";
             }

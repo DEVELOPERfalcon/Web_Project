@@ -9,7 +9,7 @@
     $content;
     $count;
 
-	$sql="select title, content, writeDate, count from question where No=$No";
+	$sql="select title, content, writeDate, count from suggest where No=$No";
 	$result=mysqli_query($connect, $sql);
 	$rowCount=mysqli_num_rows($result);
     
@@ -66,7 +66,7 @@
     
             <script>
                 $(document).ready(function(){
-                    $('#target').load('http://developer3.dothome.co.kr/WebProject/qestion.php');
+                    $('#target').load('http://developer3.dothome.co.kr/WebProject/suggest.php');
                 });
                 function profile(){
                     window.open('http://developer3.dothome.co.kr/WebProject/profile.html', 'new_win', 'width=355, height=510, left='+(screen.availWidth/2-177)+', top='+(screen.availHeight/2-255)+', toolbars=no, menubars=no, scrollbars=no, resizable=no');
@@ -84,7 +84,7 @@
                         <ul class='nav nav-tabs'>
                             <li class='nav-item col'><a href='http://developer3.dothome.co.kr/WebProject/introduce.html' class='nav-link'>앱 소개</a></li>
                             <li class='nav-item col'><a href='http://developer3.dothome.co.kr/WebProject/bug.html' class='nav-link'>버그 신고</a></li>
-                            <li class='nav-item col'><a href='http://developer3.dothome.co.kr/WebProject/question.html' class='nav-link active'>문의</a></li>
+                            <li class='nav-item col'><a href='http://developer3.dothome.co.kr/WebProject/suggest.html' class='nav-link active'>건의 및 제안</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -119,7 +119,7 @@
         </body>
     </html>";
     echo "<br>";
-    $sql="update question set count='$count' where No='$No'";
+    $sql="update suggest set count='$count' where No='$No'";
     $result=mysqli_query($connect, $sql);
 	
 	mysqli_close($connect);

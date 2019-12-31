@@ -6,9 +6,9 @@
 
 	$connect=mysqli_connect("localhost", "developer3", "qwas2468!", "developer3");
 	mysqli_query($connect, "set names utf8");
-	$sql="insert into question(title, content, writeDate) value('$title', '$content', '$now')";
+	$sql="insert into suggest(title, content, writeDate) value('$title', '$content', '$now')";
 	$result=mysqli_query($connect, $sql);
-	if($result) include './question.html';
+	if($result) include './suggest.html';
 	else echo "저장 실패하였습니다.";
 	mysqli_close($connect);
 ?>
